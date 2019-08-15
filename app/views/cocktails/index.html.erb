@@ -1,1 +1,16 @@
-<h1> Hello there, how are we today</h1>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(https://images.pexels.com/photos/1267254/pexels-photo-1267254.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);">
+  <div class="container">
+    <h1>Cocktelo</h1>
+    <p>There's a drink for every mood or occasion. 😉</p>
+  </div>
+</div>
+
+
+<div class="cards">
+<% @cocktails.each do |cocktail| %>
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.pexels.com/photos/1148215/pexels-photo-1148215.jpeg?auto=compress&cs=tinysrgb&dpr&w=600)">
+    <h2><%= cocktail.name %></h2>
+  </div>
+<% end %>
+</div>
+
