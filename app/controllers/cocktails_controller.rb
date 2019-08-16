@@ -10,7 +10,7 @@ class CocktailsController < ApplicationController
   end
 
   def show
-    @cocktails = Cocktail.find(params[:id])
+    @cocktail = Cocktail.find(params[:id])
   end
 
   def new
@@ -18,9 +18,9 @@ class CocktailsController < ApplicationController
   end
 
   def create
-    @cocktails = Cocktail.find(params[:id])
-    @cocktail.update(coctail_params)
-    redirect_to cocktail_path(@cocktail)
+    @cocktail = Cocktail.new(cocktail_params)
+    @cocktail.save
+    redirect_to cocktails_path
   end
 
   private
