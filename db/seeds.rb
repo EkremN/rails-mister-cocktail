@@ -59,12 +59,12 @@ dose_attributes = [
   },
   {
     description:    'description 3',
-    cocktail: Cocktail.first,
+    cocktail: Cocktail.third,
     ingredient: Ingredient.first
   },
   {
     description:    'description 4',
-    cocktail: Cocktail.second,
+    cocktail: Cocktail.fourth,
     ingredient: Ingredient.second
   }
 ]
