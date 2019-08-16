@@ -8,9 +8,11 @@
 
 <div class="cards">
 <% @cocktails.each do |cocktail| %>
-  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.pexels.com/photos/1148215/pexels-photo-1148215.jpeg?auto=compress&cs=tinysrgb&dpr&w=600)">
-    <h2><%= cocktail.name %></h2>
-  </div>
+  <%= link_to cocktail_path(cocktail) do %>
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= @pictures.sample %>)">
+      <h2><%= cocktail.name %></h2>
+    </div>
+  <% end %>
 <% end %>
 </div>
 
